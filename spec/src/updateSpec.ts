@@ -7,7 +7,7 @@ import { MockPromisedNpm } from "./helpers/MockPromisedNpm";
 describe("update", function () {
 	var nullLogger = new cmn.ConsoleLogger({ quiet: true, debugLogMethod: () => {/* do nothing */} });
 	var nullNpm: cmn.PromisedNpm = new MockPromisedNpm({
-		logger: nullLogger, 
+		logger: nullLogger
 	});
 	it("does not crash when called", function (done: any) {
 		update({ debugNpm: nullNpm, moduleNames: undefined, logger: nullLogger }, (err: any) => {
